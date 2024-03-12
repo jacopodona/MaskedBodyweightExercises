@@ -1,0 +1,24 @@
+{
+    "exercise": "lunge",
+    "use_rep_dataset": true,
+    "rep_size": 505,
+    "visible_joints": [
+        0,
+        4,
+        6,
+        10,
+        14,
+        17
+    ],
+    "normalize_skeleton": true,
+    "augmentation": true,
+    "linear_embed_dimensionality": 32,
+    "vit_attention_heads": 8,
+    "vit_hidden_dimensionality": 512,
+    "vit_encoder_layers": 4,
+    "batch_size": 64,
+    "epochs": 200,
+    "learning_rate": 0.001,
+    "loss_function": "L1",
+    "num_joints": 21
+}
