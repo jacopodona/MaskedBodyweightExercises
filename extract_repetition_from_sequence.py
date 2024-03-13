@@ -402,7 +402,7 @@ if __name__ == '__main__':
     #datapath = "data/pkl/zed/final_takes/18 joints"
     #extract_repetitions_temporal_window(datapath, D, pelvis_index=18, window_size=61, derivative_threshold=0.004)
     #check_saved_sequences(path="data/pkl/zed/final_takes/single_repetitions", frames=D)
-    #check_saved_sequences(path="data/pkl/reconstructed_zed/single_repetitions_ok", frames=D)
+    #check_saved_sequences(path="data/pkl/reconstructed_zed/single_repetitions", frames=D)
 
     # MPose
     #datapath = "data/pkl/rgb/30 gennaio lunge front higher"
