@@ -20,9 +20,8 @@ def createHeatmap(similarity_matrix,columns,rows,cmap="YlGnBu",path=None,title=N
     # plt.show()
     if path is not None:
         plt.savefig(path, dpi=150)
-        plt.close()
-    else:
-        plt.show()
+    plt.show()
+    plt.close()
 
 def sigmoid_activation(value,alpha=1,beta=0):
     """

@@ -153,7 +153,7 @@ def extract_repetitions_temporal_window(data_path= "data/pkl/optitrack/baseline_
             #assert occurences==20
 
             plt.scatter(indexes,first_derivative_smoothed[indexes],c="orange")
-            plotSignal(first_derivative_smoothed,title="Derivative peaks",y_value="$\\frac{dY}{dt}$ value")
+            #plotSignal(first_derivative_smoothed,title="Derivative peaks",y_value="$\\frac{dY}{dt}$ value")
             #plt.scatter(indexes, y_original[indexes], c="orange")
             #plotSignal(y_original, title="Original Signal with Derivative peaks", y_value="hip height (m)")
             if occurences%2==1:
@@ -161,7 +161,7 @@ def extract_repetitions_temporal_window(data_path= "data/pkl/optitrack/baseline_
                 indexes=indexes.tolist()
                 indexes.pop(14)
                 plt.scatter(indexes, first_derivative_smoothed[indexes], c="red")
-                plotSignal(first_derivative_smoothed, title="Derivative peaks", y_value="$\\frac{dY}{dt}$ value")
+                #plotSignal(first_derivative_smoothed, title="Derivative peaks", y_value="$\\frac{dY}{dt}$ value")
                 plt.scatter(indexes, y_original[indexes], c="orange")
                 # plotSignal(y_original, title="Original Signal with Derivative peaks", y_value="hip height (m)")
                 indexes=np.array(indexes)
@@ -376,6 +376,7 @@ def check_saved_sequences(path,frames):
     path=os.path.join(path,f"{frames}_frames")
     if os.path.exists(path):
         exercise_list=os.listdir(path)
+        exercise_list=["squat_back_forward","squat_too_high"]
         for exercise in exercise_list:
             folder_path=os.path.join(path,exercise)
             take_list=os.listdir(folder_path)
@@ -394,9 +395,9 @@ if __name__ == '__main__':
     D = 21
 
     #OPTITRACK
-    #datapath = "data/pkl/optitrack/baseline_skeleton"
+    datapath = "data/pkl/optitrack/baseline_skeleton"
     #extract_repetitions_temporal_window(datapath,D,pelvis_index=0,window_size=201,derivative_threshold=0.002)
-    #check_saved_sequences(path="data/pkl/optitrack/single_repetitions",frames=D)
+    check_saved_sequences(path="data/pkl/optitrack/single_repetitions",frames=D)
 
     # ZED
     #datapath = "data/pkl/zed/final_takes/18 joints"

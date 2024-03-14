@@ -132,7 +132,7 @@ def main():
             take = opt_csv.Take().readCSV(file_path)
             frames=loadData(take,show=False)
             pickle_out_name=file.replace(".csv",".pkl")
-            out_file_path=path.replace("csv","pkl")
+            out_file_path=path.replace("csv","pkl/optitrack")
             if not os.path.exists(out_file_path):
                 os.mkdir(out_file_path)
             out_file_name=os.path.join(out_file_path,pickle_out_name)
