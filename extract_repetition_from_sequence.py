@@ -396,7 +396,7 @@ if __name__ == '__main__':
 
     #OPTITRACK
     datapath = "data/pkl/optitrack/baseline_skeleton"
-    #extract_repetitions_temporal_window(datapath,D,pelvis_index=0,window_size=201,derivative_threshold=0.002)
+    extract_repetitions_temporal_window(datapath,D,pelvis_index=0,window_size=201,derivative_threshold=0.002)
     check_saved_sequences(path="data/pkl/optitrack/single_repetitions",frames=D)
 
     # ZED
